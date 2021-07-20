@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BusBookingProject
-{
-
-
-    public partial class Login
-    {
-
+namespace BusBookingProject {
+    
+    
+    public partial class Login {
+        
         /// <summary>
         /// lblErrorMsg control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblErrorMsg;
-
+        
         /// <summary>
         /// vsLogin control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary vsLogin;
-
+        
         /// <summary>
         /// txtUserId control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUserId;
-
+        
         /// <summary>
         /// rfvLoginId control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLoginId;
-
+        
         /// <summary>
         /// regexmail control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regexmail;
-
+        
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-
+        
         /// <summary>
         /// rfvPassword control.
         /// </summary>
@@ -76,7 +74,16 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword;
-
+        
+        /// <summary>
+        /// regexpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regexpass;
+        
         /// <summary>
         /// RememberMe control.
         /// </summary>
@@ -85,7 +92,7 @@ namespace BusBookingProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox RememberMe;
-
+        
         /// <summary>
         /// btnLogin control.
         /// </summary>

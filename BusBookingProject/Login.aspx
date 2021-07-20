@@ -57,6 +57,7 @@
                                 <asp:TextBox runat="server" ID="txtPassword" placeholder="Enter Password Here" TextMode="Password" CssClass="form-control" OnTextChanged="txtPassword_TextChanged" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" Display="None" CssClass="text-danger" ID="rfvPassword"
                                     ErrorMessage="The password field is required." ValidationGroup="vgLogin" />
+                                <asp:RegularExpressionValidator ID="regexpass" runat="server" ValidationExpression="^[a-zA-Z0-9]{6,8}$" ErrorMessage="Please enter valid Password including Capital and small letters and numbers." ValidationGroup="vgRegister" ControlToValidate="txtPassword" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                             </div>
                             <div class="input-group">
                                 <div class="checkbox">

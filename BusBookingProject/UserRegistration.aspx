@@ -39,7 +39,9 @@
                             <asp:Label ID="lblPassword" runat="server" Text="Password" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtPassword" runat="server" class="form-control input-sm floatlabel" TextMode="Password" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" Display="None" ID="rfvPassword" ValidationGroup="vgRegister"
-                                    CssClass="text-danger" ErrorMessage="Password  is required." /><br />
+                                    CssClass="text-danger" ErrorMessage="Password  is required." />
+                            <asp:RegularExpressionValidator ID="regexpass" runat="server" ValidationExpression="^[a-zA-Z0-9]{6,8}$" ErrorMessage="Please enter valid Password including Capital and small letters and numbers." ValidationGroup="vgRegister" ControlToValidate="txtPassword" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
+                            <br />
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">

@@ -58,3 +58,11 @@ C:\Project\Online Bus Booking System\code\BusBookingProject\BusBookingProject\ob
 C:\Project\Online Bus Booking System\code\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.csproj.CopyComplete
 C:\Project\Online Bus Booking System\code\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.dll
 C:\Project\Online Bus Booking System\code\BusBookingProject\BusBookingProject\obj\Debug\BusBookingProject.pdb
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\bin\BusBookingProject.dll.config
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\bin\BusBookingProject.dll
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\bin\BusBookingProject.pdb
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.csproj.AssemblyReference.cache
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.csproj.CoreCompileInputs.cache
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.csproj.CopyComplete
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.dll
+C:\Project\Online Bus Booking System\code\BusBookingProject\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.pdb

@@ -11,7 +11,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                          <div class=" panel-title">
-                        <h3>Introduction About Online Bus Booking</h3>
+                        <h3>Introduction About Online Bus Booking System for all</h3>
                     </div>
                        </div>
                     <div class="panel-body">

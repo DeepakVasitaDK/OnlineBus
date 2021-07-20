@@ -59,14 +59,6 @@
                                     ErrorMessage="The password field is required." ValidationGroup="vgLogin" />
                                 <asp:RegularExpressionValidator ID="regexpass" runat="server" ValidationExpression="^[a-zA-Z0-9]{6,8}$" ErrorMessage="Please enter valid Password including Capital and small letters and numbers." ValidationGroup="vgRegister" ControlToValidate="txtPassword" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                             </div>
-                            <div class="input-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <asp:CheckBox runat="server" ID="RememberMe" />
-                                        <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me</asp:Label>
-                                    </label>
-                                </div>
-                            </div>
                             <div  class="form-group">
                                 <!-- Button -->
                                 <div class="col-sm-12 controls">

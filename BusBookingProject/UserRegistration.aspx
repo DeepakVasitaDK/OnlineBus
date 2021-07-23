@@ -19,6 +19,8 @@
                             <asp:TextBox ID="txtFirstName" runat="server" class="form-control input-sm floatlabel"/>
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtFirstName" Display="None" ID="rfvFirstName" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="First Name is required." /><br />
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationExpression="^[A-Z]{1}[A-Za-z]{2,}$" ErrorMessage="First Letter should Capital in First Name Always." ValidationGroup="vgRegister" ControlToValidate="txtFirstName" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
+
                         </div>
                        <div class="form-group">
                             <asp:Label ID="lblMobileNumber" runat="server" Text="Mobile No" Font-Bold="true"></asp:Label>
@@ -35,6 +37,7 @@
                             <asp:TextBox ID="txtLastName" runat="server" class="form-control input-sm floatlabel"/>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtLastName" Display="None" ID="rfVLastName" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Last Name is required." /><br />
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationExpression="^[A-Z]{1}[A-Za-z]{2,}$" ErrorMessage="First Letter should Capital in Last Name Always." ValidationGroup="vgRegister" ControlToValidate="txtLastName" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                         </div>
                         
                         <div class="form-group">

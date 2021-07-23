@@ -42,7 +42,7 @@
                             <asp:TextBox ID="txtPassword" runat="server" class="form-control input-sm floatlabel" TextMode="Password" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" Display="None" ID="rfvPassword" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Password  is required." />
-                            <asp:RegularExpressionValidator ID="regexpass" runat="server" ValidationExpression="^^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" ErrorMessage="Password must be 1 Capital,1 Small and 1 Special character with minimum 6 characters" ValidationGroup="vgRegister" ControlToValidate="txtPassword" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="regexpass" runat="server" ValidationExpression="^^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" ErrorMessage="Password must contain Atleast 1 Capital and 1 Small Alphabates,1 Special Character with minimum 8 characters" ValidationGroup="vgRegister" ControlToValidate="txtPassword" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                             <br />
                         </div>
                     </div>

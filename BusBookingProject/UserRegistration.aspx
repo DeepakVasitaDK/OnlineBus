@@ -21,10 +21,12 @@
                                     CssClass="text-danger" ErrorMessage="First Name is required." /><br />
                         </div>
                        <div class="form-group">
-                            <asp:Label ID="lblUserName" runat="server" Text="Mobile No/User Name" Font-Bold="true"></asp:Label>
+                            <asp:Label ID="lblMobileNumber" runat="server" Text="Mobile No" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtMobileNo" runat="server" class="form-control input-sm floatlabel" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMobileNo" Display="None" ID="rfVMobileNo" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Mobile No is required." /><br />
+                           <asp:RegularExpressionValidator ID="regexmobileno" runat="server" ValidationExpression="^[0-9]{10}$" ErrorMessage="Enter valid Phone Number" ValidationGroup="vgRegister" ControlToValidate="txtMobileNo" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
+                           
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
@@ -40,7 +42,7 @@
                             <asp:TextBox ID="txtPassword" runat="server" class="form-control input-sm floatlabel" TextMode="Password" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" Display="None" ID="rfvPassword" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Password  is required." />
-                            <asp:RegularExpressionValidator ID="regexpass" runat="server" ValidationExpression="^[a-zA-Z0-9]{6,8}$" ErrorMessage="Please enter valid Password including Capital and small letters and numbers." ValidationGroup="vgRegister" ControlToValidate="txtPassword" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="regexpass" runat="server" ValidationExpression="^[a-zA-Z0-9]{6,8}$" ErrorMessage="Minimum 6 characters are required and no special characters for Password" ValidationGroup="vgRegister" ControlToValidate="txtPassword" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                             <br />
                         </div>
                     </div>
@@ -72,6 +74,7 @@
                             <asp:TextBox ID="txtPincode" runat="server" class="form-control input-sm floatlabel" />
                              <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPincode" Display="None" ID="rfvPinCode" ValidationGroup="vgRegister"
                                     CssClass="text-danger" ErrorMessage="Pin code is required." /><br />
+                            <asp:RegularExpressionValidator ID="regexpincode" runat="server" ValidationExpression="^[0-9]{6}$" ErrorMessage="Enter valid Pincode" ValidationGroup="vgRegister" ControlToValidate="txtPincode" Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">

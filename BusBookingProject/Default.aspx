@@ -11,16 +11,15 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                          <div class=" panel-title">
-                        <h3>Introduction About Online Bus Booking System for all</h3>
+                        <h3>Introduction About Our System</h3>
                     </div>
                        </div>
                     <div class="panel-body">
                         <p style="font-size:large">
-                            Online Bus Booking System is Web Based application,That works with in centralised network,It Provides facility to 
+                            Online Bus Booking System is Web Based application.It Provides facility to 
                             reserved seats,different type of enquiry which need an instant and quick reservation.
-                            Buses may be used for scheduled bus transport, scheduled coach transport, school transport, private hire, 
-                            or tourism; promotional buses may be used for political campaigns and others are privately operated for a wide range of purposes, 
-                            including rock and pop band tour vehicles.
+                            Buses may be used for scheduled bus transport,scheduled coach transport,private hire, 
+                            or tourism.
                         </p>
                     </div>
                 </div>

@@ -40,19 +40,16 @@
                                    Zero booking fees No Extra Charges for online booking.
                                </li>
                                <li>
-                                   100 % Secure to book your bus tickets with Online Bus Booking System.
+                                   100% Secure to book your bus tickets with Online Bus Booking System.
                                </li>
                                <li>
-                                   All Credit/Debit/Internet Banking Accepted.
+                                   All Net Banking Accepted.
                                </li>
                                <li>
                                    Get tickets to your mobile.
                                </li>
                                <li>
                                    Online cancellation and phone support available.
-                               </li>
-                               <li>
-                                   The fastest way to book bus tickets.
                                </li>
                                <li>
                                    Book bus tickets online for Major routes across India.

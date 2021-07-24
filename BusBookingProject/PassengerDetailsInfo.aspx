@@ -4,32 +4,57 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" style="margin-top: 8%">
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ShowSummary="true" ValidationGroup="vgPass" />
+                    <div id="div1" runat="server" />
         <asp:GridView ID="gdPassengerDetails" runat="server" ShowFooter="true" AutoGenerateColumns="false" Width="100%" OnSelectedIndexChanged="gdPassengerDetails_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="RowNumber" HeaderText="Row Number" />
                 <asp:TemplateField HeaderText="First Name">
                     <ItemTemplate>
-                        <asp:TextBox ID="txtFName" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtFName" runat="server" CssClass="form-control" ></asp:TextBox>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtFName" Display="None" ID="rfFirstName" ValidationGroup="vgPass"
+                                    CssClass="text-danger" ErrorMessage="First Name is required." /><br />
+                            <asp:RegularExpressionValidator ID="regexfname" runat="server" ValidationExpression="^[A-Z]{1}[A-Za-z]{2,}$" 
+                                ErrorMessage="First Letter should Capital in First Name Always." ValidationGroup="vgPass" ControlToValidate="txtFName" 
+                                Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Last Name">
                     <ItemTemplate>
                         <asp:TextBox ID="txtLName" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtLName" Display="None" ID="rfLastName" ValidationGroup="vgPass"
+                                    CssClass="text-danger" ErrorMessage="First Name is required." /><br />
+                            <asp:RegularExpressionValidator ID="regexlname" runat="server" ValidationExpression="^[A-Z]{1}[A-Za-z]{2,}$" 
+                                ErrorMessage="First Letter should Capital in Last Name Always." ValidationGroup="vgPass" ControlToValidate="txtLName" 
+                                Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Email">
                     <ItemTemplate>
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Width="100%"></asp:TextBox><br />
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail" Display="None" ID="rfEmail" ValidationGroup="vgPass"
+                                    CssClass="text-danger" ErrorMessage="Email Id is required." />
+                            <asp:RegularExpressionValidator ID="regexmail" runat="server" 
+                                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Please enter valid format for email"
+                                ValidationGroup="vgPass" ControlToValidate="txtEmail" Display="None" CssClass="text-danger">
+                            </asp:RegularExpressionValidator>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Contact">
                     <ItemTemplate>
                         <asp:TextBox ID="txtContact" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtContact" Display="None" ID="rfMobileNo" ValidationGroup="vgPass"
+                                    CssClass="text-danger" ErrorMessage="Mobile No is required." /><br />
+                           <asp:RegularExpressionValidator ID="regexmobileno" runat="server" ValidationExpression="^[6-9]{1}[0-9]{9}$" 
+                               ErrorMessage="Enter valid Phone Number" ValidationGroup="vgPass" ControlToValidate="txtContact" 
+                               Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="City">
                     <ItemTemplate>
                         <asp:TextBox ID="txtCity" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCity" Display="None" ID="rfCity" ValidationGroup="vgPass"
+                                    CssClass="text-danger" ErrorMessage="City Name is required." /><br />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField>
@@ -43,7 +68,7 @@
         </asp:GridView>
 
         <asp:Button ID="btnConirmBooking" runat="server" CssClass="btn btn-success" Style="width: auto; margin-top: 2%" Text="Confirm Booking"
-            OnClick="btnConirmBooking_Click" ClientIDMode="Static" />
+            OnClick="btnConirmBooking_Click" ClientIDMode="Static" ValidationGroup="vgPass"  CausesValidation="True" ViewStateMode="Inherit"/>
 
         <div class="row" id="paymentMode" runat="server">
             <div class="panel panel-default">
@@ -61,8 +86,8 @@
                                 <asp:ListItem Value="1" Text="Credit Card"></asp:ListItem>
                                 <asp:ListItem Value="2" Text="Debit Card"></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlCardType" Display="None" ID="rfvFirstName" ValidationGroup="vgRegister"
-                                CssClass="text-danger" ErrorMessage="Card Type is required." /><br />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlCardType" Display="Dynamic" ID="rfvFirstName" ValidationGroup="vgRegister"
+                                CssClass="text-danger" ErrorMessage="Card Type is required." InitialValue="0"/><br />
                         </div>
                         <div class="form-group">
                             <asp:Label ID="lblBankName" runat="server" Text="Select Bank" Font-Bold="true"></asp:Label>
@@ -74,14 +99,17 @@
                                 <asp:ListItem Value="4" Text="HDFC Bank"></asp:ListItem>
                                 <asp:ListItem Value="5" Text="Bank Of Baroda"></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlBank" Display="None" ID="rfVMobileNo" ValidationGroup="vgRegister"
-                                CssClass="text-danger" ErrorMessage="Bank Name is required." /><br />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlBank" Display="Dynamic" ID="rfVMobileNo" ValidationGroup="vgRegister"
+                                CssClass="text-danger" ErrorMessage="Bank Name is required." InitialValue="0"/><br />
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
                         <div class="form-group">
                             <asp:Label ID="lblLastName" runat="server" Text="3 Digit CVV Code" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtCode" runat="server" class="form-control input-sm floatlabel" />
+                            <asp:RegularExpressionValidator ID="regexcvv" runat="server" ValidationExpression="^[0-9]{3}" 
+                               ErrorMessage="Enter 3 number code only for CVV" ValidationGroup="vgRegister" ControlToValidate="txtCode" 
+                               Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCode" Display="None" ID="rfVLastName" ValidationGroup="vgRegister"
                                 CssClass="text-danger" ErrorMessage="CVV COde is required." /><br />
                         </div>
@@ -89,6 +117,9 @@
                         <div class="form-group">
                             <asp:Label ID="lblPassword" runat="server" Text="Card No" Font-Bold="true"></asp:Label>
                             <asp:TextBox ID="txtCardNo" runat="server" class="form-control input-sm floatlabel" />
+                            <asp:RegularExpressionValidator ID="regexcard" runat="server" ValidationExpression="^[0-9]{16}" 
+                               ErrorMessage="Enter proper 16 number for card" ValidationGroup="vgRegister" ControlToValidate="txtCardNo" 
+                               Display="None" CssClass="text-danger"></asp:RegularExpressionValidator>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCardNo" Display="None" ID="rfvPassword" ValidationGroup="vgRegister"
                                 CssClass="text-danger" ErrorMessage="Card No  is required." /><br />
                         </div>

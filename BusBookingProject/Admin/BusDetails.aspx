@@ -48,7 +48,6 @@
                                  <asp:ListItem Value="1" Text="Non-AC"></asp:ListItem>
                                  <asp:ListItem Value="1" Text="AC"></asp:ListItem>
                                  <asp:ListItem Value="1" Text="Normal"></asp:ListItem>
-                                 <asp:ListItem Value="1" Text="Normal"></asp:ListItem>
                                   <asp:ListItem Value="1" Text="Travel Class(Not Yet Started)"></asp:ListItem>
                              </asp:DropDownList>
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlBusType" Display="None" ID="rfVLastName" ValidationGroup="vgRegister"

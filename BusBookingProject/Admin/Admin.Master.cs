@@ -13,5 +13,11 @@ namespace BusBookingProject.Admin
         {
 
         }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("AdminLogin.aspx");
+            btnLogout.Visible = false;
+        }
     }
 }

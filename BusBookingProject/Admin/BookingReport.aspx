@@ -21,6 +21,7 @@
                          <asp:BoundField HeaderText="Seat No" DataField="SeatNo" />
                          <asp:BoundField HeaderText="Fare" DataField="Fare" />
                         <asp:BoundField HeaderText="Booked By" DataField="BookedBy" />
+                         <asp:BoundField HeaderText="Status" DataField="Status" />
                     </Columns>
                 </asp:GridView>
     </div>

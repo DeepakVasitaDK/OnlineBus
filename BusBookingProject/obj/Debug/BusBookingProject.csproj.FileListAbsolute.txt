@@ -74,3 +74,11 @@ C:\Users\Admin\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProj
 C:\Users\Admin\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.csproj.CopyComplete
 C:\Users\Admin\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.dll
 C:\Users\Admin\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.pdb
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\bin\BusBookingProject.dll.config
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\bin\BusBookingProject.dll
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\bin\BusBookingProject.pdb
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.csproj.AssemblyReference.cache
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.csproj.CoreCompileInputs.cache
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.csproj.CopyComplete
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.dll
+C:\Users\p\Source\Repos\OnlineBus\BusBookingProject\obj\Debug\BusBookingProject.pdb

@@ -20,6 +20,12 @@
                                 <asp:HiddenField ID="hdnPNRNo" runat="server" Value='<%# Eval("PNRNo") %>' />
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Cancle">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lnkbtncancelTicket" runat="server" CommandName="Cancel Ticket" CommandArgument='<%# Container.DataItemIndex %>'>Cancel Ticket</asp:LinkButton>
+                                <asp:HiddenField ID="hdPNRNo" runat="server" Value='<%# Eval("PNRNo") %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
 

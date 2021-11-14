@@ -132,12 +132,35 @@ namespace BusBookingProject
 
         protected void gdTicketReport_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            int index = Convert.ToInt32(e.CommandArgument);
+            GridViewRow row = gdTicketReport.Rows[index];
             if (e.CommandName == "Download Ticket")
             {
-                int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = gdTicketReport.Rows[index];
+                
                 printTicket(row.Cells[1].Text);
             }
+            if (e.CommandName == "Cancel Ticket")
+            {
+                cancelTicket(row.Cells[1].Text);
+            }
+
+        }
+        private void cancelTicket(string transactionNo)
+        {
+            
+                string statusTicket = "Cancel";
+                SqlCommand sqlCmd = new SqlCommand();
+                if (connString.State == ConnectionState.Closed)
+                {
+                    connString.Open();
+                }
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.AddWithValue("@PNRNo", Convert.ToString(transactionNo));
+                sqlCmd.Parameters.AddWithValue("@ticketstatus", Convert.ToString(statusTicket));
+                sqlCmd.CommandText = "isCancelTicket";
+                sqlCmd.Connection = connString;
+                sqlCmd.ExecuteNonQuery();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Ticket is cancel and Payment will be refund in 24 hours....')", true);
         }
     }
 }
